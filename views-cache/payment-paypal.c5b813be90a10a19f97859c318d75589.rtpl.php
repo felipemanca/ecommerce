@@ -3,6 +3,7 @@
     <input type="hidden" name="upload" value="1">
     <INPUT TYPE="hidden" name="charset" value="utf-8">
     <input type="hidden" name="business" value="prototypecommerce@gmail.com">
+    <input name="itemShippingCost<?php echo htmlspecialchars( $counter+1, ENT_COMPAT, 'UTF-8', FALSE ); ?>" type="hidden" value="<?php echo htmlspecialchars( $cart["vlfreight"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
 
     <?php $counter1=-1;  if( isset($products) && ( is_array($products) || $products instanceof Traversable ) && sizeof($products) ) foreach( $products as $key1 => $value1 ){ $counter1++; ?>
 
