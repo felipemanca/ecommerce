@@ -9,13 +9,26 @@ use \Hcode\Model\User;
 use \Hcode\Model\Order;
 use \Hcode\Model\OrderStatus;
 
-$app->get('/', function() {
+$app->get('/home', function() {
 
 	$products = Product::listAll();
 
 	$page = new Page();
 
-	$page->setTpl("index", [
+	$page->setTpl("home", [
+		'products'=>Product::checkList($products)
+	]);
+
+});
+
+
+$app->get('/list-products', function() {
+
+	$products = Product::listAll();
+
+	$page = new Page();
+
+	$page->setTpl("list-products", [
 		'products'=>Product::checkList($products)
 	]);
 
@@ -66,6 +79,20 @@ $app->get("/products/:desurl", function($desurl){
 });
 
 $app->get("/cart", function(){
+
+	$cart = Cart::getFromSession();
+
+	$page = new Page();
+
+	$page->setTpl("cart", [
+		'cart'=>$cart->getValues(),
+		'products'=>$cart->getProducts(),
+		'error'=>Cart::getMsgError()
+	]);
+
+});
+
+$app->get("/product-detail", function(){
 
 	$cart = Cart::getFromSession();
 
