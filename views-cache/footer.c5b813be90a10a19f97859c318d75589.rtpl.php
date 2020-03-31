@@ -4,8 +4,8 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-about-us">
-                        <h2>Prototype Commerce</h2>
-                        <p>#####################</p>
+                        <h2>Red Dogs</h2>
+                        <p>Site oficial da Red Dogs, especializada em vendas de aparelhos eletrónicos.</p>
                     </div>
                 </div>
                 
@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                        <p>&copy; 2020 Prototype Commerce. <a href="#" target="_blank">prototypecommerce.com.br</a></p>
+                        <p>&copy; 2020 Red Dogs. <a href="#" target="_blank">reddogs.com.br</a></p>
                     </div>
                 </div>
                 
